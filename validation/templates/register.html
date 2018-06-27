@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title></title>
+</head>
+<center>
+
+<style>
+   h1 {
+             color: orangered;
+             font-family: verdana;
+             font-size: 300%;
+            }
+</style>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<h1>ACTIFIO</h1>
+
+<body background='{% static "rgb3.png" %} ' >
+<form method="POST" class="messages">
+
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Submit</button>
+        {% if messages %}
+               {% for message in messages %}
+               {{message}}
+    {% endfor %}
+
+    </form>
+{%endif%}
+<h4> &nbsp; &nbsp; Already have an account?</h4>
+
+
+<button onclick="location.href='/'">Log In</button>
+
+</body>
+</html>

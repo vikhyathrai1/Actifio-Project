@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Login Page </title>
+</head>
+<script>
+function f()
+{ if(document.getElementById("uid").value.length==0)
+  {
+  alert("User Id cant be blank");
+  }
+  else if(document.getElementById("pwd").value.length==0)
+  {
+  alert("Password can't be blank");
+  }
+ a=document.getElementById("uid").value;
+
+ b=document.getElementById("email").value;
+ console.log(a);
+ document.write("<br>");
+ console.log(b);
+
+ }
+</script>
+<body>
+<form>
+User Id:- <input type="text" id="uid"> </br> </br>
+Password:- <input type="password" id="pwd"> </br> </br>
+Email:- <input type="email" id="email"></br></br>
+<input type="button" onclick="f()" value="Login">
+</form>
+</body>
+</html>

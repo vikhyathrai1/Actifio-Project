@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Login</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+
+</script>
+</head>
+<center>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<body background='{% static "paintbg2.png" %} ' style="background-size:1650px 780px">
+<script>
+    console.log(document.cookie.indexOf('sessionid'));
+</script>
+
+    <form method="POST" action="actifio/">
+        {% csrf_token %}
+        <style>
+        p  {
+            color: red;
+            font-family: courier;
+            font-size: 160%;
+            }
+
+         h1 {
+             color: orangered;
+             font-family: verdana;
+             font-size: 300%;
+            }
+         </style>
+         <h1>ACTIFIO</h1>
+        <p>
+            <label>Username</label>
+            <input type="text" name="username">
+        </p>
+        <p>
+            <label>Password</label>
+            <input type="password" name="password">
+            </br>
+            </br>
+
+            <button style="height: 35px; width: 100px"type="submit">Login</button>
+
+        </p>
+        <br>
+        <h2 style="color:orangered;">Do not have an account?</h2>
+        <br>
+
+
+        <style>
+            a { color: #FF0000; }
+            a {font-size: 20px}
+        </style>
+
+        <a href="register/">REGISTER</a>
+    </form>
+
+
+</body>
+</center>
+</html>
